@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Fabíola Mailiote - Advogada Especialista em Direito</title>
+    <meta name="description" content="Dra. Fabíola Mailiote, advogada especializada em Direito de Família, Sucessões, Consumidor e pensões de viúvas de policiais militares do RS. Justiça e eficiência para seus direitos.">
+    <meta name="keywords" content="advogada, direito de família, sucessões, consumidor, pensões policiais militares, RS, IPE PREV, justiça">
+    <meta name="author" content="Dra. Fabíola Mailiote">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://seuusuario.github.io/site-adv-fabiolamailiote/"> <!-- Substitua pelo seu link real -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5DC;
+            color: #333;
+            line-height: 1.8;
+        }
+        header {
+            background: linear-gradient(rgba(128, 0, 32, 0.8), rgba(128, 0, 32, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.3em;
+            margin: 10px 0;
+        }
+        nav {
+            background-color: #D2B48C;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #800020;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: white;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #sobre {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        #foto-perfil {
+            flex: 1;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        #foto-perfil img {
+            width: 250px;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid #800020;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        #foto-placeholder {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px dashed #800020;
+            background-color: #F5F5DC;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #800020;
+            font-size: 1.2em;
+            margin: 0 auto;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        #foto-placeholder:hover {
+            background-color: #D2B48C;
+        }
+        #editar-foto {
+            margin-top: 10px;
+            background-color: #800020;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        #editar-foto:hover {
+            background-color: #A52A2A;
+        }
+        #file-input {
+            display: none;
+        }
+        #sobre .texto {
+            flex: 2;
+            padding-left: 20px;
+        }
+        #servicos {
+            background-color: #F5F5DC;
+            text-align: center;
+        }
+        #servicos h2 {
+            color: #800020;
+        }
+        .servico-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .servico {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .servico:hover {
+            transform: translateY(-5px);
+        }
+        .servico i {
+            font-size: 3em;
+            color: #800020;
+            margin-bottom: 10px;
+        }
+        #artigo {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        #depoimentos {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .depoimento {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        #faq {
+            background-color: #F5F5DC;
+            text-align: center;
+        }
+        #faq h2 {
+            color: #800020;
+        }
+        .faq-item {
+            background: white;
+            margin: 10px auto;
+            max-width: 800px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        #contato {
+            background-color: #800020;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        #contato a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        .btn {
+            background-color: #800020;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #A52A2A;
+        }
+        footer {
+            background-color: #D2B48C;
+            text-align: center;
+            padding: 20px;
+            color: #800020;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            #sobre { flex-direction: column; }
+            .servico-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dra. Fabíola Mailiote</h1>
+        <p>Advogada Especialista em Direito de Família e Sucessões, Direito do Consumidor e Pensões de Viúvas de Policiais Militares do Rio Grande do Sul</p>
+    </header>
+    
+    <nav>
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#artigo">Artigos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    
+    <section id="sobre">
+        <div id="foto-perfil">
+            <div id="foto-placeholder">
+                <p>Clique aqui para inserir sua foto profissional</p>
+                <button id="editar-foto" style="display: none;">Editar Foto</button>
+            </div>
+            <input type="file" id="file-input" accept="image/*">
+        </div>
+        <div class="texto">
+            <h2>Sobre Mim</h2>
+            <p>Sou a Dra. Fabíola Mailiote, advogada dedicada a defender os direitos de meus clientes com ética, competência e empatia. Com especialização em Direito de Família e Sucessões, Direito do Consumidor e, especialmente, nas pensões de viúvas de policiais militares do Rio Grande do Sul, atuo para garantir justiça e segurança jurídica em cada caso.</p>
+            <p>Como filha de um policial militar falecido em serviço, compreendo profundamente os desafios enfrentados por essas famílias. Minha experiência pessoal me motiva a lutar pelos direitos que merecem, transformando histórias de injustiça em vitórias concretas.</p>
+        </div>
+    </section>
+    
+    <section id="servicos">
+        <h2>Serviços Oferecidos</h2>
+        <div class="servico-grid">
+            <div class="servico">
+                <i class="fas fa-home"></i>
+                <h3>Direito de Família e Sucessões</h3>
+                <p>Assessoria completa em divórcios, guarda de filhos, inventários e partilhas, sempre priorizando soluções justas e rápidas.</p>
+            </div>
+            <div class="servico">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Direito do Consumidor</h3>
+                <p>Defesa contra práticas abusivas, reclamações e ações judiciais para proteger seus direitos como consumidor.</p>
+            </div>
+            <div class="servico">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Pensões de Viúvas de Policiais Militares do RS</h3>
+                <p>Especialidade em concessões administrativas e judiciais para garantir o valor integral das pensões, com foco em justiça e eficiência.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="artigo">
+        <h2>Artigos e Informações</h2>
+        <h3>O IPE PREV e as Pensões das Viúvas de Policiais Militares do Rio Grande do Sul: Garantindo o Direito ao Valor Integral</h3>
+        <p>No Rio Grande do Sul, muitas viúvas de policiais militares enfrentam injustiças no recebimento de suas pensões por meio do IPE PREV. Infelizmente, o instituto tem concedido apenas uma porcentagem do valor devido, privando essas mulheres do montante integral ao qual têm direito por lei. Essa prática não apenas viola direitos adquiridos, mas também agrava a vulnerabilidade de famílias que já passaram por perdas irreparáveis.</p>
+        <p>Como advogada especializada nessa área, já consegui, em diversas oportunidades, a concessão do valor integral das pensões para minhas clientes diretamente em sede administrativa, sem a necessidade de recorrer ao judiciário. Isso significa agilidade, economia e justiça sem burocracias excessivas.</p>
+        <p>Como filha de um policial militar falecido em serviço, me sensibilizo profundamente com essas situações. Minha própria mãe enfrentou dificuldades após o falecimento de meu pai, e sei o quanto uma pensão justa pode transformar vidas. Não permita que erros administrativos roubem o que é seu por direito.</p>
+        <p>Se você é viúva de um policial militar do RS e enfrenta essa injustiça, entre em contato comigo. Juntos, buscaremos seus direitos e garantiremos o recebimento integral da pensão que você merece.</p>
+        <a href="#contato" class="btn">Entre em Contato Agora</a>
+    </section>
+    
+    <section id="depoimentos">
+        <h2>Depoimentos de Clientes</h2>
+        <div class="depoimento">
+            <p>"A Dra. Fabíola me ajudou a receber a pensão integral que eu merecia. Sua dedicação e conhecimento fizeram toda a diferença na minha vida." – Maria S., Viúva de Policial Militar</p>
+        </div>
+        <div class="depoimento">
+            <p>"Profissional excepcional no Direito de Família. Resolveu meu caso de divórcio com rapidez e justiça." – João P., Cliente</p>
+        </div>
+    </section>
+    
+    <section id="faq">
+        <h2>Perguntas Frequentes sobre Pensões</h2>
+        <div class="faq-item">
+            <h4>O que é o IPE PREV?</h4>
+            <p>O Instituto de Previdência do Estado do Rio Grande do Sul (IPE PREV) administra pensões de servidores públicos, incluindo policiais militares.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Por que as viúvas recebem apenas uma porcentagem?</h4>
+            <p>Às vezes, há erros administrativos ou interpretações incorretas da lei. Muitas têm direito ao valor integral, e eu ajudo a corrigir isso.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Preciso de um processo judicial?</h4>
+            <p>Não sempre. Muitos casos são resolvidos administrativamente, economizando tempo e custos.</p>
+        </div>
+    </section>
+    
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato para agendar uma consulta ou esclarecer dúvidas.</p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/5551999062389"><i class="fab fa-whatsapp"></i> 51 99906-2389</a></p>
+        <p><strong>Email:</strong> <a href="mailto:fmailiote.adv@gmail.com"><i class="fas fa-envelope"></i> fmailiote.adv@gmail.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/advfabiolamailiote" target="_blank"><i class="fab fa-instagram"></i> @advfabiolamailiote</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Dra. Fabíola Mailiote. Todos os direitos reservados. | Desenvolvido com dedicação à justiça.</p>
+    </footer>
+
+    <script>
+        const fotoPlaceholder = document.getElementById('foto-placeholder');
+        const fileInput = document.getElementById('file-input
